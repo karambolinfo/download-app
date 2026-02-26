@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Download App</title>
+  <script>
+    function detectDevice() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=ТВІЙ_PACKAGE_NAME";
+      }
+
+      else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/app/idТВІЙ_APP_ID";
+      }
+
+      else {
+        // Якщо відкрили з комп’ютера
+        window.location.href = "https://твій-сайт.com";
+      }
+    }
+
+    window.onload = detectDevice;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
