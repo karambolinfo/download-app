@@ -8,16 +8,16 @@
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=ТВІЙ_PACKAGE_NAME";
+        window.location.href = "https://play.google.com/store/apps/details?id=com.karambol";
       }
 
       else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/app/idТВІЙ_APP_ID";
+        window.location.href = "https://apps.apple.com/us/app/karambol/id6743453143";
       }
 
       else {
         // Якщо відкрили з комп’ютера
-        window.location.href = "https://твій-сайт.com";
+        window.location.href = "https://karambol.info";
       }
     }
 
